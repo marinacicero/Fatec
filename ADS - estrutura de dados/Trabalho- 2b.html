@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" type="text/css" href="Trabalho-2b.css"></head>
+<body>
+
+<h2>Concurso</h2>
+
+<form id="candidateForm">
+  <label for="name">Nome:</label><br>
+  <input type="text" id="name" name="name"><br>
+  <label for="score">Número de acertos:</label><br>
+  <input type="number" id="score" name="score"><br>
+  <input type="button" value="Adicionar Candidato" onclick="addCandidate()">
+</form>
+
+<button onclick="setMinScore()">Definir acertos para aprovação</button><br>
+<button onclick="listAll()">Listar todos os candidatos</button><br>
+<button onclick="showApproved()">Listar aprovados</button>
+
+<div id="candidates"></div>
+
+<script>
+let candidates = [];
+let minScore = 0;
+
+function addCandidate() {
+    let name = document.getElementById("name").value;
+    let score = document.getElementById("score").value;
+    
+    candidates.push({name: name, score: parseInt(score)});
+    
+    document.getElementById("name").value = "";
+    document.getElementById("score").value = "";
+}
+
+function setMinScore() {
+    minScore = prompt("Digite o número de acertos para aprovação:");
+}
+
+function listAll() {
+    let outputDiv = document.getElementById("candidates");
+    outputDiv.innerHTML = "<h3>Todos os candidatos:</h3>";
+    
+    for(let candidate of candidates) {
+        outputDiv.innerHTML += "<p>" + candidate.name + " - " + candidate.score + "</p>";
+    }
+}
+
+function showApproved() {
+    let approvedCandidates = candidates.filter(candidate => candidate.score >= minScore);
+    
+    approvedCandidates.sort((a, b) => b.score - a.score);
+    
+    let outputDiv = document.getElementById("candidates");
+    outputDiv.innerHTML = "";
+    
+    if(approvedCandidates.length > 0) {
+        outputDiv.innerHTML += "<h3>Candidatos aprovados:</h3>";
+        for(let candidate of approvedCandidates) {
+            outputDiv.innerHTML += "<p>" + candidate.name + " - " + candidate.score + "</p>";
+        }
+    } else {
+        outputDiv.innerHTML = "<p>Não há candidatos aprovados</p>";
+    }
+}
+</script>
+
+</body>
+</html>
+

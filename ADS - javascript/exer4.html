@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Elementos e Funções - Lote 01 - Exercício 01</title>
+</head>
+<body>
+    <h1 style="text-align: center">Estrutura de Elementos e Funções - Lote 01 - Exercício 04</h1>
+    <h2 style="text-align: center">Disciplina: Linguagem de programação</h2>
+    <h2 style="text-align: center">Nome do Aluno: Marina Silva Cicero</h2>   
+
+    <script>
+        let valor1, valor2, valor3
+        document.write('Maior e o menor entre 3 números<br>')
+
+        valor1 = parseFloat(prompt('Informe o Primeiro Número:'))
+        valor2 = parseFloat(prompt('Informe o Segundo Número:'))
+        valor3 = parseFloat(prompt('Informe o Segundo Número:'))
+
+        document.write('<br>Primeiro Número: ' + valor1)
+        document.write('<br>Segundo Número: ' + valor2)
+        document.write('<br>Terceiro Número: ' + valor3)
+        console.log('Primeiro Número: ' + valor1)
+        console.log('Segundo Número: ' + valor2)
+        console.log('Terceiro Número: ' + valor3)
+
+        calcularMaior(valor1, valor2, valor3)
+        calcularMenor(valor1, valor2, valor3)
+
+        /*
+        Funções do projeto
+        */
+        function calcularMaior(v1, v2, v3) {
+            if (v1 == v2 && v2 == v3) {
+                document.write('<br>')
+                document.write('Os Números são iguais.')
+                console.log('Os Números são iguais.')
+            } else if (v1 > v2 && v1 > v3)  {
+                document.write('<br>')
+                document.write('<br>O Primeiro número é o maior<br>')
+                console.log('O Primeiro número é o maior')
+            } else if ((v2 > v1 && v2 > v3)){
+                document.write('<br>')
+                document.write('<br>O Segundo número é o maior<br>')
+                console.log('O Segundo número é o maior .')
+            } else{
+                document.write('<br>')
+                document.write('<br>O Terceiro número é o maior<br>')
+                console.log('O Terceiro número é o maior .')
+            }
+        }
+
+        function calcularMenor(v1, v2, v3) {
+            if (v1 == v2 && v2 == v3) {
+                document.write('Os Números são iguais.')
+                console.log('Os Números são iguais.')
+            } else if (v1 < v2 && v1 < v3)  {
+                document.write('<br>O Primeiro número é o menor<br>')
+                console.log('O Primeiro número é o menor')
+            } else if ((v2 < v1 && v2 < v3)){
+                document.write('<br>O Segundo número é o menor<br>')
+                console.log('O Segundo número é o menor .')
+            } else{
+                document.write('<br>O Terceiro número é o menor<br>')
+                console.log('O Terceiro número é o menor .')
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Elementos e Funções - Lote 01 - Exercício 01</title>
+</head>
+<body>
+    <h1 style="text-align: center">Estrutura de Elementos e Funções - Lote 01 - Exercício 06</h1>
+    <h2 style="text-align: center">Disciplina: Linguagem de programação</h2>
+    <h2 style="text-align: center">Nome do Aluno: Marina Silva Cicero</h2>   
+
+    <script>
+        let salario
+        document.write('Calcular o reajuste do Salario')
+        console.log('Calcular o reajuste do Salario')
+
+        salario = parseFloat(prompt('Informe o salario:'))
+        
+        document.write('<br>Salario atual: ' + salario)
+        console.log('Salario atual: ' + salario)
+        
+        reajuste(salario)
+
+        /*
+        Funções do projeto
+        */
+        function reajuste(sal) {
+            let salNovo
+            if (sal <= 280) {
+                salNovo = sal + (sal * 0.20)
+                document.write('<br>')
+                document.write('O percentual do aumento foi de 20%<br>')
+                document.write('<br>O valor do aumento foi de: ' + (sal * 0.20))
+                document.write('<br>O novo salario será:' + salNovo)
+                console.log('O percentual do aumento foi de 20%')
+                console.log('O valor do aumento foi de: ' + (sal * 0.20))
+                console.log('O novo salario será:' + salNovo)
+            } else if(sal > 280 && sal <= 700) {
+                salNovo = sal + (sal * 0.15)
+                document.write('<br>')
+                document.write('O percentual do aumento foi de 15%<br>')
+                document.write('<br>O valor do aumento foi de: ' + (sal * 0.15))
+                document.write('<br>O novo salario será:' + salNovo)
+                console.log('O percentual do aumento foi de 15%')
+                console.log('O valor do aumento foi de: ' + (sal * 0.15))
+                console.log('O novo salario será:' + salNovo)
+            } else if(sal > 700 && sal <= 1500) {
+                salNovo = sal + (sal * 0.10)
+                document.write('<br>')
+                document.write('O percentual do aumento foi de 10%<br>')
+                document.write('<br>O valor do aumento foi de: ' + (sal * 0.10))
+                document.write('<br>O novo salario será:' + salNovo)
+                console.log('O percentual do aumento foi de 10%')
+                console.log('O valor do aumento foi de: ' + (sal * 0.10))
+                console.log('O novo salario será:' + salNovo)
+            } else if(sal > 1500) {
+                salNovo = sal + (sal * 0.05)
+                document.write('<br>')
+                document.write('O percentual do aumento foi de 5%<br>')
+                document.write('<br>O valor do aumento foi de: ' + (sal * 0.05))
+                document.write('<br>O novo salario será:' + salNovo)
+                console.log('O percentual do aumento foi de 5%')
+                console.log('O valor do aumento foi de: ' + (sal * 0.05))
+                console.log('O novo salario será:' + salNovo)}
+            
+            
+        }
+
+
+    </script>
+</body>
+</html>

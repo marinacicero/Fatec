@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Elementos e Funções - Lote 01 - Exercício 01</title>
+</head>
+<body>
+    <h1 style="text-align: center">Estrutura de Elementos e Funções - Lote 01 - Exercício 03</h1>
+    <h2 style="text-align: center">Disciplina: Linguagem de programação</h2>
+    <h2 style="text-align: center">Nome do Aluno: Marina Silva Cicero</h2>   
+
+    <script>
+        let num
+        document.write('Número Par ou Impar<br>')
+        console.log('Número Par ou Impar')
+
+        num = parseFloat(prompt('Informe o número:'))
+
+        document.write('<br>O número informado foi: ' + num)
+        console.log('O número informado foi: ' + num)
+       
+
+        calcular(num)
+
+        /*
+        Funções do projeto
+        */
+        function calcular(num) {
+            let resto
+
+            resto = num % 2 
+
+            if (resto == 0) {
+                document.write('<br>O Valor é Par')
+                console.log('O Valor é Par')
+            } else {
+                document.write('<br>O Valor é Impar')
+                console.log('O Valor é Impar')
+            }
+        }
+    </script>
+</body>
+</html>

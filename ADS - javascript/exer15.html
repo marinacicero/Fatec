@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Elementos e Funções - Lote 01 - Exercício 01</title>
+</head>
+<body>
+    <h1 style="text-align: center">Estrutura de Elementos e Funções - Lote 02 - Exercício 15</h1>
+    <h2 style="text-align: center">Disciplina: Linguagem de programação</h2>
+    <h2 style="text-align: center">Nome do Aluno: Marina Silva Cicero</h2>   
+
+    <script>
+        let lado
+        document.write('Area de um quadrado<br>')
+        console.log('Area de um quadrado')
+
+        lado = parseFloat(prompt('Informe o valor do lado :'))
+
+        document.write('<br>O valor do lado é : ' + lado)
+        console.log('O valor do lado é: ' + lado)
+       
+
+        calcular(lado)
+
+        /*
+        Funções do projeto
+        */
+        function calcular(num) {
+           let area
+           area = lado * lado
+           document.write('<br>')
+           document.write('<br>A area do quadrado é: ' + area)
+           console.log('A area do quadrado é: ' + area)
+        
+        }
+    </script>
+</body>
+</html>

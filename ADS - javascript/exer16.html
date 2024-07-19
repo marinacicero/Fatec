@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Elementos e Funções - Lote 02 - Exercício 16</title>
+</head>
+<body>
+    <h1 style="text-align: center">Estrutura de Elementos e Funções - Lote 02 - Exercício 16</h1>
+    <h2 style="text-align: center">Disciplina: Linguagem de programação</h2>
+    <h2 style="text-align: center">Nome do Aluno: Marina Silva Cicero</h2>   
+
+    <script>
+        let altura, peso
+        document.write('Calcular IMC')
+        console.log('Calcular IMC')
+
+        altura = parseFloat(prompt('Informe a altura:'))
+        peso = parseFloat(prompt('Informe o peso:'))
+
+
+        document.write('<br>Altura: ' + altura.toFixed(2))
+        document.write('<br>Peso: ' + peso.toFixed(2))
+        console.log('Altura: ' + altura.toFixed(2))
+        console.log('Peso: ' + peso.toFixed(2))
+
+
+        calcular(altura, peso)
+
+        /*
+        Funções do projeto
+        */
+        function calcular(alt, peso) {
+            let IMC
+          IMC =  peso / (altura * 2)
+            document.write('<br>')
+            document.write('<br>O Indice de Massa Corporal é: ' + IMC.toFixed(2))
+            console.log('O Indice de Massa Corporal é: ' + IMC.toFixed(2))
+        }
+    </script>
+</body>
+</html>

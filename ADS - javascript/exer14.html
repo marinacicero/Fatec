@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Elementos e Funções - Lote 02 - Exercício 14</title>
+</head>
+<body>
+    <h1 style="text-align: center">Estrutura de Elementos e Funções - Lote 02 - Exercício 14</h1>
+    <h2 style="text-align: center">Disciplina: Linguagem de programação</h2>
+    <h2 style="text-align: center">Nome do Aluno: Marina Silva Cicero</h2>   
+
+    <script>
+        let salarioH, horas
+        document.write('Calcular Salario e valor hora')
+        console.log('Calcular Salario e valor hora')
+
+        salarioH = parseFloat(prompt('Informe o valor do salario-hora:'))
+        horas = parseFloat(prompt('Informe as horas trabalhadas:'))
+
+
+        document.write('<br>Valor hora é ' + salarioH.toFixed(2))
+        document.write('<br>Horas trabalhadas: ' + horas.toFixed(2))
+        console.log('Valor hora é: ' + salarioH.toFixed(2))
+        console.log('Horas trabalhadas: ' + horas.toFixed(2))
+
+
+        calcular(salarioH, horas)
+
+        /*
+        Funções do projeto
+        */
+        function calcular(sal, horas) {
+            let salario
+            salario = (sal * horas )
+            document.write('<br>')
+            document.write('<br>O valor do salario é: ' + salario.toFixed(2))
+            console.log('O valor do salario é: ' + salario.toFixed(2))
+        }
+    </script>
+</body>
+</html>

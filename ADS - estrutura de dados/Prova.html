@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" type="text/css" href="prova2b.css"></head>
+<body>
+
+<h2>Jogos Eliminatorios</h2>
+
+<form id="candidateForm">
+ <label for="Clube">Clube: </label>
+ <input type="text" id="Clube" name="Clube">
+ <input type="button" value="Adicionar" onclick="addClube()"><br>
+</form>
+
+<button onclick="listAll()">Listar todos os times</button>
+<button onclick="jogos()">Montar Tabela dos jogos</button>
+
+<div id="clubes"></div>
+
+<script> let clubs = []; function addClube() { let club = document.getElementById('Clube').value; clubs.push(club);
+ document.getElementById('Clube').value = ''; } 
+ function listAll() {
+     let output = ''; for(let i=0; i<clubs.length; i++) {
+         output += (i+1) + '. ' + clubs[i] + '<br>';
+     } 
+     document.getElementById('output').innerHTML = output; }
+
+     function jogos() {
+    let numClubs = clubs.length;
+    if (numClubs % 2 !== 0) {
+        alert("O número de clubes informados é ímpar. Não é possível montar a tabela de jogos.");
+        return;
+    }
+
+    let Tabela = [];
+    for (let i = 0; i < numClubs / 2; i++) {
+        let PrimeiroClub = clubs[i];
+        let UltClub = clubs[numClubs - 1 - i];
+        let match = PrimeiroClub + ' x ' + UltClub;
+        Tabela.push(match);
+    }
+
+    let output = 'Tabela de Jogos:<br>';
+    for (let i = 0; i < Tabela.length; i++) {
+        output += (i + 1) + '. ' + Tabela[i] + '<br>';
+    }
+
+    document.getElementById('output').innerHTML = output;
+}
+ </script>
+  <div id="output"></div>
+</body>
+ </html>

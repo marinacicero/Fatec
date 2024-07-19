@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #fefcfc;
+    text-align: left;
+    
+}
+
+h2 {
+    color: #F4DFC8;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    border: #FAF6F0;
+}
+
+form {
+    margin-bottom: 20px;
+    color:#F4EAE0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #F4EAE0;
+    font-size: 25px;
+}
+button, input[type="button"]{
+    font-size: 1.2em;
+    background: #F4DFC8;
+    color: #000000;
+    margin-bottom: 10px;
+    size: 20px;
+    border-radius: 5px;
+    padding: auto;
+    border-color: antiquewhite;
+    font-size: 15px;
+}
+
+button {
+    font-size: 1.2em;
+    background: #F4DFC8;
+    color: #000000;
+    margin-bottom: 10px;
+    size: 20px;
+    border-radius: 5px;
+    padding: auto;
+    border-color: antiquewhite;
+    border: 2px, solid;
+    
+}
+
+#candidates {
+    margin-top: 20px;
+}
+
+#candidates h3 {
+    color: #F4DFC8;
+}
+
+#candidates p {
+    margin-bottom: 5px;
+}

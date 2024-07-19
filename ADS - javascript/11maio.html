@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decisão if else</title>
+</head>
+<body>
+    <h3> Estrutura de decisão if else</h3>
+</body>
+<script> 
+/*
+o programa recebera um número e informará o dia da semana correspondente 
+*/
+let dia
+document.write('<br> teste de decisão com If Else <br>')
+
+dia = parseFloat(prompt('Informe o dia da semana desejado"'))
+
+if(isNaN(dia)) {
+    alert('Informação Invalida!')
+} else  if (dia < 1 || dia > 7) {
+    document.write('<br> dia fora dos limites entre 1 e 7 <br>')
+    console.log('dia fora dos limites entre 1 e 7')}
+    if (dia < 1 || dia > 7) {
+    document.write('<br> Informação númerica valida!')
+    console.log(dia)
+
+    if (dia == 1) {
+        document.write('Domingo')
+    } else if (dia == 2) {
+        document.write('Segunda-feira')
+    }  else if (dia == 3) {
+        document.write('Terça-feira')
+    }   else if (dia == 4) {
+        document.write('Quarta-feira')
+    }  else if (dia == 5) {
+        document.write('Quinta-feira')
+    }  else if (dia == 6) {
+        document.write('sexta-feira')
+    }   else if (dia == 7) {
+        document.write('Sabado')
+    }
+    else {
+        document.write('dia informado invalido')
+        console.log('dia informado invalido')
+    }
+}
+</script>
+</html>

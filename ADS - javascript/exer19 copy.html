@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Elementos e Funções - Lote 02 - Exercício 13</title>
+</head>
+<body>
+    <h1 style="text-align: center">Estrutura de Elementos e Funções - Lote 01 - Exercício 19</h1>
+    <h2 style="text-align: center">Disciplina: Linguagem de programação</h2>
+    <h2 style="text-align: center">Nome do Aluno: Marina Silva Cicero</h2>   
+
+    <script>
+        let valorF, dist, imposto
+        document.write('Valor final de um veiculo<br>')
+
+        valorF = parseFloat(prompt('Informe o valor de fabrica:'))
+        dist = parseFloat(prompt('Informe o percentual da distribuidora:'))
+        imposto = parseFloat(prompt('Informe o percentual de impostos:'))
+
+        document.write('<br>Valor de fabrica: ' + valorF.toFixed(2))
+        document.write('<br>Distribuidora: ' + dist+'%')
+        document.write('<br>Impostos ' + imposto+'%')
+        console.log('Valor de fabrica: ' + valorF.toFixed(2))
+        console.log('Distribuidora: ' + dist+'%')
+        console.log('Impostos ' + imposto+'%')
+
+        calcular(valorF, dist, imposto)
+
+        /*
+        Funções do projeto
+        */
+
+        function calcular(valorF, dist, imposto) {
+            let total, dist1, imposto1
+            dist1 = (valorF / 100) * dist
+            imposto1 = (valorF / 100) * imposto
+            total = valorF + dist1 + imposto1
+
+            document.write('<br>')
+            document.write('<br>Valor correspondente ao lucro do distribuidor: ' + dist1.toFixed(2))
+            document.write('<br>Valor correspondente aos impostos: ' + imposto1.toFixed(2))
+            document.write('<br>Preço final do veículo: ' + total.toFixed(2))
+            console.log('Valor correspondente ao lucro do distribuidor: ' + dist1.toFixed(2))
+            console.log('Valor correspondente aos impostos: ' + imposto1.toFixed(2))
+            console.log('Preço final do veículo: ' + total.toFixed(2))
+
+        }
+
+    </script>
+</body>
+</html>

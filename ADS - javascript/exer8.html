@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Elementos e Funções - Lote 01 - Exercício 01</title>
+</head>
+<body>
+    <h1 style="text-align: center">Estrutura de Elementos e Funções - Lote 01 - Exercício 08</h1>
+    <h2 style="text-align: center">Disciplina: Linguagem de programação</h2>
+    <h2 style="text-align: center">Nome do Aluno: Marina Silva Cicero</h2>   
+
+    <script>
+        let valor1, valor2, valor3
+        document.write('Menor valor entre três produtos<br>')
+
+        valor1 = parseFloat(prompt('Informe o Primeiro Valor:'))
+        valor2 = parseFloat(prompt('Informe o Segundo Valor:'))
+        valor3 = parseFloat(prompt('Informe o Terceiro Valor:'))
+
+        document.write('<br>Primeiro Número: ' + valor1)
+        document.write('<br>Segundo Número: ' + valor2)
+        document.write('<br>Terceiro Número: ' + valor3)
+        console.log('Primeiro Número: ' + valor1)
+        console.log('Segundo Número: ' + valor2)
+        console.log('Terceiro Número: ' + valor3)
+
+        calcularMenor(valor1, valor2, valor3)
+
+        /*
+        Funções do projeto
+        */
+
+        function calcularMenor(v1, v2, v3) {
+            if (v1 < v2 && v1 < v3)  {
+                document.write('<br>Compre o primeiro produto. <br>')
+                console.log('Compre o primeiro produto.')
+            } else if ((v2 < v1 && v2 < v3)){
+                document.write('<br>Compre o segundo produto<br>')
+                console.log('Compre o segundo produto')
+            } else{
+                document.write('<br>Compre o terceiro produto<br>')
+                console.log('Compre o terceiro produto')
+            }
+        }
+
+    </script>
+</body>
+</html>

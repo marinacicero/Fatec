@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Elementos e Funções - Lote 01 - Exercício 01</title>
+</head>
+<body>
+    <h1 style="text-align: center">Estrutura de Elementos e Funções - Lote 01 - Exercício 07</h1>
+    <h2 style="text-align: center">Disciplina: Linguagem de programação</h2>
+    <h2 style="text-align: center">Nome do Aluno: Marina Silva Cicero</h2>   
+
+    <script>
+        let nota1, nota2
+        document.write('Aluno Aprovado ou Reprovado<br>')
+        console.log('Aluno Aprovado ou Reprovado<br>')
+
+        nota1 = parseFloat(prompt('Informe a primeira nota:'))
+        nota2 = parseFloat(prompt('Informe a segunda nota:'))
+       
+       
+        document.write('<br>Primeira nota: ' + nota1)
+        document.write('<br>Segunda nota: ' + nota2)
+        console.log('Primeira nota: ' + nota1)
+        console.log('Segunda nota: ' + nota2)
+        
+        calcular(nota1, nota2)
+
+        /*
+        Funções do projeto
+        */
+        function calcular(nota1, nota2) {
+            let media
+            media = (nota1 + nota2) / 2
+            if (media == 10) {
+                document.write('<br>A media foi: ' + media)
+                document.write('<br>Aluno aprovado com distinção')
+                console.log('A media foi: ' + media)
+                console.log('Aluno aprovado com distinção ')
+            } else if (media >= 7) {
+                document.write('<br>A media foi: ' + media)
+                document.write('<br>Aluno aprovado')
+                console.log('A media foi: ' + media)
+                console.log('Aluno aprovado')
+            } else{
+                document.write('<br>A media foi: ' + media)
+                document.write('<br>Aluno reprovado')
+                console.log('A media foi: ' + media)
+                console.log('Aluno reprovado ')
+            }
+        }
+
+    
+
+    </script>
+</body>
+</html>

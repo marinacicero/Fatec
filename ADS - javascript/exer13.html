@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Elementos e Funções - Lote 02 - Exercício 13</title>
+</head>
+<body>
+    <h1 style="text-align: center">Estrutura de Elementos e Funções - Lote 02 - Exercício 13</h1>
+    <h2 style="text-align: center">Disciplina: Linguagem de programação</h2>
+    <h2 style="text-align: center">Nome do Aluno: Marina Silva Cicero</h2>   
+
+    <script>
+        let valor1, valor2, valor3
+        document.write('Media entre três produtos<br>')
+
+        valor1 = parseFloat(prompt('Informe o Primeiro Valor:'))
+        valor2 = parseFloat(prompt('Informe o Segundo Valor:'))
+        valor3 = parseFloat(prompt('Informe o Terceiro Valor:'))
+
+        document.write('<br>Primeiro Número: ' + valor1.toFixed(2))
+        document.write('<br>Segundo Número: ' + valor2.toFixed(2))
+        document.write('<br>Terceiro Número: ' + valor3.toFixed(2))
+        console.log('Primeiro Número: ' + valor1.toFixed(2))
+        console.log('Segundo Número: ' + valor2.toFixed(2))
+        console.log('Terceiro Número: ' + valor3.toFixed(2))
+
+        calcularMedia(valor1, valor2, valor3)
+
+        /*
+        Funções do projeto
+        */
+
+        function calcularMedia(v1, v2, v3) {
+            let media
+
+            media = ((v1 + v2 + v3) / 3)
+            document.write('<br>')
+            document.write('<br>A media dos valores é:' + media.toFixed(2))
+            console.log('<br>A media dos valores é:' + media.toFixed(2))
+        
+        }
+
+    </script>
+</body>
+</html>
